@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "WGm/lR3SeRGcECctOtS0tbu0rFoNpGiug0EHgNvRNus=",
+  "Source": "jessie-blogbackend",
+  "BasePath": "_content/jessie-blogbackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

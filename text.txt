@@ -1,0 +1,196 @@
+Blog Objesttive 
+create an api for the front end blog.
+Requirements 
+    -able to login
+    -create an account 
+        
+        Pages
+            -homepage
+                -display our published itesm 
+
+            -ProfilePage
+                - add blog
+                - edit blog 
+                - delete blog 
+            
+
+
+mine controllers 
+    - user controller / file 
+        - login user /endpoint 
+        - create user / endpoint 
+        - delete user / endpoint 
+        - update user / endpoint 
+    - project controller / file 
+        - create project / endpoint 
+        - delete project / endpoint 
+        - update project / endpoint 
+        - get project  / endpoint 
+    - table that holds the users to each project
+        - add users in project / endpoint  c
+        - get users in project / endpoint  r
+        - i dont thing we need to update ? u
+        - remove users in project / endpoint  d
+    - task controller
+        - create task  / endpoint 
+        - get task / endpoint 
+        - edit task / endpoint 
+        - delete task / endpoint 
+-services foler
+    - context / folder
+        - dataContext / file specifies tables
+    - UserService file
+        - User controller / file 
+            -login user / functions   
+            - create user / functions 
+            - delete user / functions 
+            - update user / functions 
+            - get userBy username function 
+    -ProjectService file
+        - project controller / file 
+            - create project / function 
+            - delete project / function 
+            - update project / function 
+            - get project  / function 
+    -table service file
+        - table that holds the users to each project controller
+            - add users in project / function  c
+            - get users in project / function  r
+            - i dont thing we need to update ? u
+            - remove users in project / function  d
+            - add user by username function
+    -task service file
+         - task controller
+            - create task  / endpoint 
+            - get task / endpoint 
+            - edit task / endpoint 
+            - delete task / endpoint 
+
+models / folder
+    -userModel
+    -ProectModel
+    -tableModel
+    -taskModel
+
+    -DTOs folder
+        - LoginDTO / file
+                - string username 
+                - string password 
+        - create accountDTO / file
+                - int id = 0
+                - string username 
+                - string password
+                - string bio 
+                - string image pfp 
+                - string firstname 
+                - string lastname
+
+        - passwordDTO / file 
+                - string salt 
+                - string hast 
+        - CreateProject DTO 
+                - int id = 0
+                - string nameProject
+                - string added user/users
+        -add user DTO
+                - string userName
+        - remove user Dto 
+                - int userId
+                - string userName
+        - createTask Dto
+                - int taskId
+                - string task name 
+                - string task description
+                - string status 
+                - string priority 
+                - string date 
+        
+
+        
+---------------------------------------------------------------------------
+---------------------------------------------------------------------------
+
+controller / foler 
+    - User controller / file 
+        -login user / endpoint   
+        - create user / endpoint 
+        - delete user / endpoint 
+        - update user / endpoint 
+    - blog controller / file
+        - create blog / endpoint 
+        - delte blog / endpoint 
+        - edit blog / endpoint 
+        - get blog item  / ednpoint
+
+        - get blogs by user id 
+        - get blogs by tags 
+        - get blogs by categories
+
+
+### this is where we put the logic instead of controllers 
+servies / folder 
+    - context / folder
+        - dataContext / file specifies tables
+    - UserService file
+        - User controller / file 
+            -login user / functions   
+            - create user / functions 
+            - delete user / functions 
+            - update user / functions 
+            - get userBy username function 
+
+    - BlogService file 
+        - blog controller / file
+            - create blog / function 
+            - delte blog / function 
+            - edit blog / function 
+            - get blog item / function
+            - get blog by blogname function
+
+            - get blogs by user id 
+            - get blogs by tags 
+            - get blogs by categories
+
+    - passwordService file 
+        - hash passwprd
+        - verify hash passwprd
+
+models / folder 
+    - userModel / file
+        - int ID
+        - string username
+        - string salt 
+        - string hash 
+
+    - blogItemModel (model for each blog item) / file
+        int ID 
+        int User ID
+        string published name 
+        string published date 
+        string title 
+        sting description 
+        string image 
+        string tags 
+        string categories 
+        bool published 
+        bool isDeleted (soft delete, still in database can be recoverable)
+
+        
+        - DTOs / folder 
+            - LoginDTO / file
+                - string username 
+                - string password 
+            - create accountDTO / file
+                - int id = 0
+                - string username 
+                - string password
+            - passwordDTO / file 
+                - string salt 
+                - string hast 
+            - 
+
+username: 
+BlogLogin
+
+password:
+Password123!@#
